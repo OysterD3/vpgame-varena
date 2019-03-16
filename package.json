@@ -1,0 +1,25 @@
+{
+  "name": "varena-bot",
+  "version": "0.0.1",
+  "description": "A bot for VARENA SEA Discord",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oyster Lee <d3fb@hotmail.my>",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^4.6.4",
+    "discord.js": "^11.4.2",
+    "expressjs": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
+  }
+}

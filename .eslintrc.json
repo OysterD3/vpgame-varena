@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "airbnb-base",
+        "plugin:node/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "linebreak-style": ["error", "unix"],
+        "consistent-return": "off",
+        "no-throw-literal": "off",
+        "no-param-reassign": "off",
+        "camelcase": "off"
+    }
+}
