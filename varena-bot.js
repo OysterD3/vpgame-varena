@@ -12,26 +12,26 @@ const correctGameID = val => {
 };
 
 client.on("message", msg => {
-  if (
-    (msg.content.toLowerCase().includes("ban") ||
-      msg.content.toLowerCase().includes("dodge") ||
-      msg.content.toLowerCase().includes("dodger") ||
-      msg.content.toLowerCase().includes("fuck") ||
-      msg.content.toLowerCase().includes("fucking") ||
-      msg.content.toLowerCase().includes("take action") ||
-      msg.content.toLowerCase().includes("take actions") ||
-      msg.mentions.users.array().some(i => i.id === "359542633238102017") ||
-      msg.mentions.users.array().some(i => i.id === "456343396743774218") ||
-      msg.mentions.users.array().some(i => i.id === "553086998760521769") ||
-      msg.mentions.users.array().some(i => i.id === "359891075688693761") ||
-      msg.mentions.users.array().some(i => i.id === "382710538884481036") ||
-      msg.mentions.users.array().some(i => i.id === "556021383620984832")) &&
-    !msg.author.bot
-  ) {
-    msg.reply(
-      `do you want to report someone or something? Type **${prefix}help** for more info!`
-    );
-  }
+  // if (
+  //   (msg.content.toLowerCase().includes("ban") ||
+  //     msg.content.toLowerCase().includes("dodge") ||
+  //     msg.content.toLowerCase().includes("dodger") ||
+  //     msg.content.toLowerCase().includes("fuck") ||
+  //     msg.content.toLowerCase().includes("fucking") ||
+  //     msg.content.toLowerCase().includes("take action") ||
+  //     msg.content.toLowerCase().includes("take actions") ||
+  //     msg.mentions.users.array().some(i => i.id === "359542633238102017") ||
+  //     msg.mentions.users.array().some(i => i.id === "456343396743774218") ||
+  //     msg.mentions.users.array().some(i => i.id === "553086998760521769") ||
+  //     msg.mentions.users.array().some(i => i.id === "359891075688693761") ||
+  //     msg.mentions.users.array().some(i => i.id === "382710538884481036") ||
+  //     msg.mentions.users.array().some(i => i.id === "556021383620984832")) &&
+  //   !msg.author.bot
+  // ) {
+  //   msg.reply(
+  //     `do you want to report someone or something? Type **${prefix}help** for more info!`
+  //   );
+  // }
   if (!msg.content.startsWith(prefix) || msg.author.bot) return;
   const attachments = msg.attachments.array();
   const attachmentNotExist = attachments.length < 1;
@@ -69,9 +69,11 @@ client.on("message", msg => {
         );
         msg.delete();
       } else if (!isDigitOnly(steamID) || !correctGameID(gameID)) {
-        msg.reply(`Please check your format. Type **${prefix}help** for more info.`);
+        msg.reply(
+          `Please check your format. Type **${prefix}help** for more info.`
+        );
         msg.channel.send(
-          `!report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
+          `${prefix}report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
         );
       } else if (attachmentNotExist) {
         msg.reply(
@@ -102,7 +104,7 @@ client.on("message", msg => {
           `Please check your format. Type **${prefix}help** for more info.`
         );
         msg.channel.send(
-          `!report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
+          `${prefix}report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
         );
       } else if (attachmentNotExist) {
         msg.reply(

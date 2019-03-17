@@ -73,7 +73,7 @@ client.on("message", msg => {
           `Please check your format. Type **${prefix}help** for more info.`
         );
         msg.channel.send(
-          `!report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
+          `${prefix}report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
         );
       } else if (attachmentNotExist) {
         msg.reply(
@@ -104,7 +104,7 @@ client.on("message", msg => {
           `Please check your format. Type **${prefix}help** for more info.`
         );
         msg.channel.send(
-          `!report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
+          `${prefix}report <player|gameplay|dodge|dodger> <DotA2 ID> <10-digits Match ID (Put "1" for dodger report)> <Description> & Upload your **proof** with the command`
         );
       } else if (attachmentNotExist) {
         msg.reply(
