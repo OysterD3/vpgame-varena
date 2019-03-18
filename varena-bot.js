@@ -124,6 +124,15 @@ client.on("message", msg => {
         "This command must come with attachment(s)"
       )
       .addBlankField()
+      .addField(
+        "Example 1",
+        `${prefix}report player 86750253 4459706310 This fucking dummy, blocked my way to top1`
+      )
+      .addField(
+        "Example 2",
+        `${prefix}report dodge 86750253 1 This fucking dodger make me can't get top1`
+      )
+      .addBlankField()
       .addField("Supported type", "player | gameplay | dodge | dodger");
     msg.channel.send(embedMsg);
   } else if (command === "test") {
