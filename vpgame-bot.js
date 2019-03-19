@@ -26,7 +26,8 @@ client.on("message", msg => {
       msg.mentions.users.array().some(i => i.id === "359891075688693761") ||
       msg.mentions.users.array().some(i => i.id === "382710538884481036") ||
       msg.mentions.users.array().some(i => i.id === "556021383620984832")) &&
-    !msg.author.bot
+    !msg.author.bot &&
+    !msg.content.startsWith(prefix)
   ) {
     msg.reply(
       `do you want to report someone or something? Type **${prefix}help** for more info!`
